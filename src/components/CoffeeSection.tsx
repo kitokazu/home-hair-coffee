@@ -37,13 +37,6 @@ const features = [
   },
 ];
 
-const beanTypes = [
-  { name: "浅煎り", english: "LIGHT" },
-  { name: "中煎り", english: "MEDIUM" },
-  { name: "深煎り", english: "DARK" },
-  { name: "ブレンド", english: "BLEND" },
-];
-
 export default function CoffeeSection() {
   return (
     <section id="coffee" className="relative bg-kraft-light/25 px-6 py-28 md:py-40">
@@ -58,11 +51,53 @@ export default function CoffeeSection() {
             >
               珈琲
             </h2>
-            {/* Stamp-style brand mark */}
-            <div className="mt-5 inline-block border border-stamp/40 px-3 py-1">
-              <span className="text-[10px] tracking-[0.15em] text-stamp/70">
-                アームズ珈琲®
+          </div>
+        </FadeIn>
+
+        {/* Arms Coffee brand block */}
+        <FadeIn delay={0.1}>
+          <div className="mt-14 text-center md:mt-16">
+            <div className="inline-block border-2 border-stamp/50 px-6 py-3">
+              <span
+                className="text-lg tracking-[0.2em] text-stamp/80 md:text-xl"
+                style={{ fontFamily: "'Shippori Mincho', serif" }}
+              >
+                アームズ珈琲<span className="text-sm align-super">®</span>
               </span>
+            </div>
+            <p className="mx-auto mt-8 max-w-lg text-sm font-light leading-[2.2] tracking-wider text-ink-light md:text-base">
+              当店はアームズ珈琲<span className="text-[10px] align-super">®</span>を提供する美容室です。
+            </p>
+          </div>
+        </FadeIn>
+
+        {/* What is Arms Coffee */}
+        <FadeIn delay={0.15}>
+          <div className="mx-auto mt-16 max-w-2xl md:mt-20">
+            <p className="text-center text-[10px] tracking-[0.3em] text-ink-muted">
+              ARMS COFFEE とは
+            </p>
+            <div className="mt-6 space-y-4 text-center text-sm font-light leading-[2.2] tracking-wider text-ink-light">
+              <p>
+                アームズ珈琲<span className="text-[10px] align-super">®</span>は、
+                一般社団法人日本焙煎技術普及協会（ARMS）が
+                推進する焙煎メソッドで仕上げた珈琲です。
+              </p>
+              <p>
+                「安心・安全で、冷めてもますます美味しい」
+                <br />
+                をコンセプトに、豆の産地ごとに最適な焙煎を施しています。
+              </p>
+            </div>
+            <div className="mt-6 text-center">
+              <a
+                href="https://rms.or.jp/about.shtml"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block text-[11px] tracking-[0.2em] text-kraft-dark/70 underline underline-offset-4 transition-colors hover:text-kraft-dark"
+              >
+                ARMS 公式サイト →
+              </a>
             </div>
           </div>
         </FadeIn>
@@ -89,53 +124,6 @@ export default function CoffeeSection() {
             </FadeIn>
           ))}
         </div>
-
-        {/* Bean type circles — inspired by the reference design */}
-        <FadeIn delay={0.1}>
-          <div className="mt-24 md:mt-32">
-            <p className="text-center text-[10px] tracking-[0.3em] text-ink-muted">
-              焙煎度合い
-            </p>
-            <div className="mt-10 flex flex-wrap items-center justify-center gap-8 md:gap-12">
-              {beanTypes.map((bean, i) => (
-                <FadeIn key={bean.name} delay={i * 0.1}>
-                  <div className="group flex flex-col items-center gap-4">
-                    {/* Circular placeholder */}
-                    <div className="relative h-24 w-24 overflow-hidden rounded-full border border-kraft/30 bg-paper-warm transition-all duration-500 group-hover:border-kraft/60 md:h-28 md:w-28">
-                      <div className="flex h-full w-full items-center justify-center">
-                        <div
-                          className="h-full w-full"
-                          style={{
-                            background: `radial-gradient(circle, ${
-                              i === 0
-                                ? "#d4c5a0"
-                                : i === 1
-                                ? "#a08860"
-                                : i === 2
-                                ? "#5c4a32"
-                                : "#8a7450"
-                            }22 0%, transparent 70%)`,
-                          }}
-                        />
-                      </div>
-                    </div>
-                    <div className="text-center">
-                      <span
-                        className="text-base tracking-[0.1em] text-ink"
-                        style={{ fontFamily: "'Shippori Mincho', serif" }}
-                      >
-                        {bean.name}
-                      </span>
-                      <span className="mt-1 block text-[8px] tracking-[0.25em] text-ink-muted">
-                        {bean.english}
-                      </span>
-                    </div>
-                  </div>
-                </FadeIn>
-              ))}
-            </div>
-          </div>
-        </FadeIn>
 
         {/* Freshness message */}
         <FadeIn delay={0.2}>

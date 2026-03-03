@@ -30,10 +30,10 @@ function FadeIn({
 }
 
 const services = [
-  { name: "カット", desc: "CUT" },
-  { name: "カラー", desc: "COLOR" },
-  { name: "パーマ", desc: "PERM" },
-  { name: "トリートメント", desc: "TREATMENT" },
+  { name: "カット", desc: "CUT", price: "¥4,730（税込）" },
+  { name: "カラー", desc: "COLOR", price: "¥6,270〜" },
+  { name: "パーマ", desc: "PERM", price: "¥10,450〜" },
+  { name: "トリートメント", desc: "TREATMENT", price: "¥2,200" },
 ];
 
 // Show real images if available, otherwise show 6 placeholders
@@ -52,8 +52,6 @@ export default function HairSection() {
 
   return (
     <section id="hair" className="relative px-6 py-28 md:py-40">
-      <div className="kraft-line mx-auto mb-28 max-w-xl md:mb-40" />
-
       <div className="mx-auto max-w-5xl">
         <FadeIn>
           <div className="text-center">
@@ -70,25 +68,30 @@ export default function HairSection() {
         </FadeIn>
 
         <FadeIn delay={0.15}>
-          <div className="mx-auto mt-14 flex max-w-md flex-wrap items-center justify-center gap-x-8 gap-y-3 md:mt-16">
-            {services.map((s, i) => (
-              <div key={s.name} className="flex items-center gap-3">
-                {i > 0 && (
-                  <span className="hidden text-kraft/40 md:inline">・</span>
-                )}
-                <div className="text-center">
-                  <span
-                    className="text-base tracking-[0.1em] text-ink md:text-lg"
-                    style={{ fontFamily: "'Shippori Mincho', serif" }}
-                  >
-                    {s.name}
-                  </span>
-                  <span className="ml-2 text-[9px] tracking-[0.2em] text-ink-muted">
-                    {s.desc}
+          <div className="mx-auto mt-14 max-w-sm md:mt-16">
+            <p className="mb-6 text-center text-[10px] tracking-[0.3em] text-ink-muted">
+              MENU
+            </p>
+            <div className="space-y-4">
+              {services.map((s) => (
+                <div key={s.name} className="flex items-baseline justify-between border-b border-kraft/15 pb-3">
+                  <div className="flex items-baseline gap-2">
+                    <span
+                      className="text-base tracking-[0.1em] text-ink"
+                      style={{ fontFamily: "'Shippori Mincho', serif" }}
+                    >
+                      {s.name}
+                    </span>
+                    <span className="text-[9px] tracking-[0.2em] text-ink-muted">
+                      {s.desc}
+                    </span>
+                  </div>
+                  <span className="text-sm tracking-wider text-ink-light">
+                    {s.price}
                   </span>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </FadeIn>
 

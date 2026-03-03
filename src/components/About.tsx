@@ -133,9 +133,9 @@ export default function About() {
                   珈琲
                 </h3>
                 <p className="mt-3 text-sm font-light leading-[2] tracking-wider text-ink-light">
-                  豆の個性を活かして、
+                  アームズ珈琲<span className="text-[9px] align-super">®</span>を、
                   <br />
-                  少量ずつ丁寧に焙煎しています。
+                  一杯ずつ丁寧にお届けします。
                 </p>
               </div>
             </div>

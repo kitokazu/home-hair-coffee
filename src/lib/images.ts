@@ -9,23 +9,27 @@ export type ImageItem = {
 // HAIR PHOTOS
 // ============================================================
 export const hairImages: ImageItem[] = [
-  { src: "/images/hair/mens-perm-textured.png", alt: "メンズパーマ", category: "hair", aspect: "portrait" },
-  { src: "/images/hair/bob-sleek.png", alt: "ボブ ストレート", category: "hair", aspect: "portrait" },
-  { src: "/images/hair/long-straight-after.png", alt: "ロング ストレート", category: "hair", aspect: "portrait" },
-  { src: "/images/hair/bob-highlight.png", alt: "ボブ ハイライト", category: "hair", aspect: "portrait" },
-  { src: "/images/hair/mens-perm-back.png", alt: "メンズパーマ バック", category: "hair", aspect: "portrait" },
-  { src: "/images/hair/short-curly.png", alt: "ショート パーマ", category: "hair", aspect: "portrait" },
-  { src: "/images/hair/short-curly-natural.png", alt: "ショート ナチュラルカール", category: "hair", aspect: "portrait" },
-  { src: "/images/hair/perm-rods-process.png", alt: "パーマ 施術中", category: "hair", aspect: "portrait" },
-  { src: "/images/hair/long-straight-before.png", alt: "ロング カット前", category: "hair", aspect: "portrait" },
+  { src: "/images/hair/IMG_1235.JPG", alt: "ヘアスタイル", category: "hair", aspect: "portrait" },
+  { src: "/images/hair/IMG_1238.JPG", alt: "ヘアスタイル", category: "hair", aspect: "portrait" },
+  { src: "/images/hair/IMG_1239.JPG", alt: "ヘアスタイル", category: "hair", aspect: "portrait" },
+  { src: "/images/hair/IMG_1241.JPG", alt: "ヘアスタイル", category: "hair", aspect: "portrait" },
+  { src: "/images/hair/IMG_1242.JPG", alt: "ヘアスタイル", category: "hair", aspect: "portrait" },
+  { src: "/images/hair/IMG_1245.JPG", alt: "ヘアスタイル", category: "hair", aspect: "portrait" },
+  { src: "/images/hair/IMG_1246.JPG", alt: "ヘアスタイル", category: "hair", aspect: "portrait" },
+  { src: "/images/hair/IMG_1247.JPG", alt: "ヘアスタイル", category: "hair", aspect: "portrait" },
+  { src: "/images/hair/IMG_1248.JPG", alt: "ヘアスタイル", category: "hair", aspect: "portrait" },
+  { src: "/images/hair/IMG_1249.JPG", alt: "ヘアスタイル", category: "hair", aspect: "portrait" },
+  { src: "/images/hair/IMG_1250.JPG", alt: "ヘアスタイル", category: "hair", aspect: "portrait" },
+  { src: "/images/hair/IMG_1258.JPG", alt: "ヘアスタイル", category: "hair", aspect: "portrait" },
 ];
 
 // ============================================================
 // COFFEE PHOTOS
 // ============================================================
 export const coffeeImages: ImageItem[] = [
-  { src: "/images/coffee/coffee.png", alt: "珈琲豆パッケージ", category: "coffee", aspect: "portrait" },
-  { src: "/images/coffee/roasting-fresh-beans.png", alt: "焙煎したての豆", category: "coffee", aspect: "portrait" },
+  { src: "/images/coffee/IMG_1233.JPG", alt: "珈琲", category: "coffee", aspect: "portrait" },
+  { src: "/images/coffee/IMG_1234.JPG", alt: "珈琲", category: "coffee", aspect: "portrait" },
+  { src: "/images/coffee/IMG_1240.JPG", alt: "珈琲", category: "coffee", aspect: "portrait" },
   { src: "/images/coffee/green-beans-sorting.png", alt: "生豆の選別", category: "coffee", aspect: "portrait" },
   { src: "/images/coffee/tasting-cups.png", alt: "テイスティング", category: "coffee", aspect: "square" },
   { src: "/images/coffee/bean-sampler-box.png", alt: "豆のサンプラーセット", category: "coffee", aspect: "portrait" },
@@ -36,8 +40,8 @@ export const coffeeImages: ImageItem[] = [
 // ABOUT SECTION IMAGES
 // ============================================================
 export const aboutImages = {
-  hair: "/images/hair/bob-sleek.png",
-  coffee: "/images/coffee/coffee.png",
+  hair: "/images/hair/IMG_1258.JPG",
+  coffee: "/images/coffee/IMG_1233.JPG",
 };
 
 // Combined gallery

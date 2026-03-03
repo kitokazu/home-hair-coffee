@@ -99,7 +99,15 @@ export default function Info() {
                 <div>
                   <span className="text-[10px] tracking-[0.35em] text-ink-muted">HOURS</span>
                   <div className="mt-2 space-y-1 text-sm tracking-wider text-ink-light">
-                    <p>営業時間はお問い合わせください</p>
+                    <p>9:00〜19:00</p>
+                  </div>
+                </div>
+
+                {/* Holidays */}
+                <div>
+                  <span className="text-[10px] tracking-[0.35em] text-ink-muted">CLOSED</span>
+                  <div className="mt-2 space-y-1 text-sm tracking-wider text-ink-light">
+                    <p>毎月曜日・第3火曜日</p>
                   </div>
                 </div>
 

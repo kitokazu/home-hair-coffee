@@ -64,8 +64,6 @@ export default function Gallery() {
 
   return (
     <section id="gallery" className="relative px-6 py-28 md:py-40">
-      <div className="kraft-line mx-auto mb-28 max-w-xl md:mb-40" />
-
       <div className="mx-auto max-w-5xl">
         <FadeIn>
           <div className="text-center">

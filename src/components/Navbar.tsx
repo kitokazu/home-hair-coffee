@@ -11,6 +11,19 @@ const navLinks = [
   { href: "#info", label: "情報" },
 ];
 
+function scrollToSection(e: React.MouseEvent<HTMLAnchorElement>, href: string) {
+  e.preventDefault();
+  if (href === "#") {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    return;
+  }
+  const el = document.querySelector(href);
+  if (el) {
+    const top = el.getBoundingClientRect().top + window.scrollY - 40;
+    window.scrollTo({ top, behavior: "smooth" });
+  }
+}
+
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -47,7 +60,7 @@ export default function Navbar() {
         <div className="mx-auto max-w-6xl px-6 md:px-10">
           <div className="flex h-16 items-center justify-between md:h-20">
             {/* Logo */}
-            <a href="#" className="transition-opacity hover:opacity-70">
+            <a href="#" onClick={(e) => scrollToSection(e, "#")} className="transition-opacity hover:opacity-70">
               <Image
                 src="/home-logo-transparent.png"
                 alt="home"
@@ -64,6 +77,7 @@ export default function Navbar() {
                 <a
                   key={link.href}
                   href={link.href}
+                  onClick={(e) => scrollToSection(e, link.href)}
                   className="group relative text-[13px] font-light tracking-[0.2em] text-ink-light transition-colors hover:text-ink"
                 >
                   {link.label}
@@ -108,7 +122,7 @@ export default function Navbar() {
                 <motion.a
                   key={link.href}
                   href={link.href}
-                  onClick={() => setMenuOpen(false)}
+                  onClick={(e) => { scrollToSection(e, link.href); setMenuOpen(false); }}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -10 }}
