@@ -30,7 +30,7 @@ function FadeIn({
 }
 
 const services = [
-  { name: "カット", desc: "CUT", price: "¥4,730（税込）" },
+  { name: "カット", desc: "CUT", price: "¥4,730" },
   { name: "カラー", desc: "COLOR", price: "¥6,270〜" },
   { name: "パーマ", desc: "PERM", price: "¥10,450〜" },
   { name: "トリートメント", desc: "TREATMENT", price: "¥2,200" },
@@ -70,7 +70,7 @@ export default function HairSection() {
         <FadeIn delay={0.15}>
           <div className="mx-auto mt-14 max-w-sm md:mt-16">
             <p className="mb-6 text-center text-[10px] tracking-[0.3em] text-ink-muted">
-              MENU
+              MENU<span className="ml-2 tracking-[0.1em]">（税込）</span>
             </p>
             <div className="space-y-4">
               {services.map((s) => (

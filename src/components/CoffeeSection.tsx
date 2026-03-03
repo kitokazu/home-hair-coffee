@@ -25,7 +25,7 @@ const features = [
   {
     label: "自家焙煎",
     english: "HOME ROASTED",
-    desc: "お店で一つずつ、手作業で焙煎しています",
+    desc: "欠損豆、カビ豆等を取り除いて丁寧に焙煎しています",
   },
   {
     label: "新鮮な豆",
@@ -93,7 +93,7 @@ export default function CoffeeSection() {
             </div>
             <div className="mt-6 text-center">
               <a
-                href="https://rms.or.jp/about.shtml"
+                href="https://rms.or.jp/index.shtml"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block text-[11px] tracking-[0.2em] text-kraft-dark/70 underline underline-offset-4 transition-colors hover:text-kraft-dark"
