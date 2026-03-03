@@ -2,6 +2,8 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import Image from "next/image";
+import { coffeeImages } from "@/lib/images";
 
 function FadeIn({ children, delay = 0, className = "" }: { children: React.ReactNode; delay?: number; className?: string }) {
   const ref = useRef(null);
@@ -139,6 +141,32 @@ export default function CoffeeSection() {
             </p>
           </div>
         </FadeIn>
+
+        {/* Photo grid */}
+        <div className="mt-16 grid grid-cols-2 gap-3 md:mt-20 md:grid-cols-3 md:gap-4">
+          {coffeeImages.map((img, i) => (
+            <FadeIn key={img.src} delay={i * 0.08}>
+              <div
+                className={`group relative ${
+                  img.aspect === "square"
+                    ? "aspect-square"
+                    : img.aspect === "landscape"
+                      ? "aspect-[5/4]"
+                      : "aspect-[3/4]"
+                } w-full overflow-hidden`}
+              >
+                <Image
+                  src={img.src}
+                  alt={img.alt}
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                  sizes="(max-width: 768px) 50vw, 33vw"
+                />
+                <div className="absolute inset-0 border border-transparent transition-all duration-300 group-hover:border-kraft/30" />
+              </div>
+            </FadeIn>
+          ))}
+        </div>
       </div>
     </section>
   );

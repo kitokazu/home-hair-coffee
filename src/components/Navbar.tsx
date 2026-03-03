@@ -7,7 +7,6 @@ import Image from "next/image";
 const navLinks = [
   { href: "#hair", label: "ヘア" },
   { href: "#coffee", label: "珈琲" },
-  { href: "#gallery", label: "ギャラリー" },
   { href: "#info", label: "情報" },
 ];
 
