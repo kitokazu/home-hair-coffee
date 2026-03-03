@@ -23,9 +23,9 @@ function FadeIn({ children, delay = 0, className = "" }: { children: React.React
 
 const features = [
   {
-    label: "自家焙煎",
+    label: "お湯洗い",
     english: "HOME ROASTED",
-    desc: "欠損豆、カビ豆等を取り除いて丁寧に焙煎しています",
+    desc: "ハンドピックで欠点豆、虫食い豆、カビ豆などを取り除き、50℃のお湯で洗いして水蒸気焙煎の後本焙煎しています。",
   },
   {
     label: "新鮮な豆",
@@ -59,12 +59,12 @@ export default function CoffeeSection() {
         {/* Arms Coffee brand block */}
         <FadeIn delay={0.1}>
           <div className="mt-14 text-center md:mt-16">
-            <div className="inline-block border-2 border-stamp/50 px-6 py-3">
+            <div className="inline-block border-2 border-stamp px-8 py-4 md:px-10 md:py-5">
               <span
-                className="text-lg tracking-[0.2em] text-stamp/80 md:text-xl"
+                className="text-2xl tracking-[0.2em] text-stamp md:text-3xl"
                 style={{ fontFamily: "'Shippori Mincho', serif" }}
               >
-                アームズ珈琲<span className="text-sm align-super">®</span>
+                アームズ珈琲<span className="text-base align-super md:text-lg">®</span>
               </span>
             </div>
             <p className="mx-auto mt-8 max-w-lg text-sm font-light leading-[2.2] tracking-wider text-ink-light md:text-base">
