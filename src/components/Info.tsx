@@ -2,6 +2,7 @@
 
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import Image from "next/image";
 
 function FadeIn({ children, delay = 0, className = "" }: { children: React.ReactNode; delay?: number; className?: string }) {
   const ref = useRef(null);
@@ -21,8 +22,8 @@ function FadeIn({ children, delay = 0, className = "" }: { children: React.React
 
 export default function Info() {
   return (
-    <section id="info" className="relative bg-kraft-light/25 px-6 py-28 md:py-40">
-      <div className="mx-auto max-w-3xl">
+    <section id="info" className="relative bg-kraft-light/25 px-6 py-24 md:py-32">
+      <div className="mx-auto max-w-4xl">
         {/* Section label */}
         <FadeIn>
           <div className="text-center">
@@ -36,126 +37,130 @@ export default function Info() {
           </div>
         </FadeIn>
 
-        {/* Info grid */}
-        <div className="mt-16 md:mt-20">
-          <div className="grid gap-12 md:grid-cols-2 md:gap-16">
-            {/* Left column */}
-            <FadeIn delay={0.1}>
-              <div className="space-y-10">
-                {/* Shop name */}
-                <div>
-                  <span className="text-[10px] tracking-[0.35em] text-ink-muted">SHOP NAME</span>
-                  <p
-                    className="mt-2 text-base tracking-[0.05em] text-ink"
-                    style={{ fontFamily: "'Shippori Mincho', serif" }}
-                  >
-                    home hair & coffee roaster
-                  </p>
-                </div>
+        {/* Side-by-side: image + info */}
+        <div className="mt-16 grid items-start gap-10 md:mt-20 md:grid-cols-[5fr_7fr] md:gap-12">
+          {/* Image */}
+          <FadeIn delay={0.1}>
+            <div className="mx-auto max-w-[280px] overflow-hidden rounded-sm md:max-w-none">
+              <Image
+                src="/images/info/IMG_0195.JPG"
+                alt="home hair & coffee roaster"
+                width={480}
+                height={640}
+                className="h-auto w-full object-cover"
+              />
+            </div>
+          </FadeIn>
 
-                {/* Owner */}
-                <div>
-                  <span className="text-[10px] tracking-[0.35em] text-ink-muted">OWNER</span>
-                  <p
-                    className="mt-2 text-base tracking-[0.05em] text-ink"
-                    style={{ fontFamily: "'Shippori Mincho', serif" }}
-                  >
-                    店主　長門 明央
-                  </p>
-                  <p className="mt-1 text-[11px] tracking-[0.15em] text-ink-muted">
-                    NAGATO AKIO
-                  </p>
-                </div>
+          {/* Info content */}
+          <FadeIn delay={0.2}>
+            <div className="grid grid-cols-2 gap-x-8 gap-y-6">
+              {/* Shop name */}
+              <div className="col-span-2">
+                <span className="text-[10px] tracking-[0.35em] text-ink-muted">SHOP NAME</span>
+                <p
+                  className="mt-2 text-base tracking-[0.05em] text-ink"
+                  style={{ fontFamily: "'Shippori Mincho', serif" }}
+                >
+                  home hair & coffee roaster
+                </p>
+              </div>
 
-                {/* Address */}
-                <div>
-                  <span className="text-[10px] tracking-[0.35em] text-ink-muted">ADDRESS</span>
-                  <p className="mt-2 text-sm leading-[2] tracking-wider text-ink-light">
-                    〒769-2101
-                    <br />
-                    香川県さぬき市志度1157
-                  </p>
+              {/* Owner */}
+              <div>
+                <span className="text-[10px] tracking-[0.35em] text-ink-muted">OWNER</span>
+                <p
+                  className="mt-2 text-base tracking-[0.05em] text-ink"
+                  style={{ fontFamily: "'Shippori Mincho', serif" }}
+                >
+                  店主　長門 明央
+                </p>
+                <p className="mt-1 text-[11px] tracking-[0.15em] text-ink-muted">
+                  NAGATO AKIO
+                </p>
+              </div>
+
+              {/* Address */}
+              <div>
+                <span className="text-[10px] tracking-[0.35em] text-ink-muted">ADDRESS</span>
+                <p className="mt-2 text-sm leading-[1.8] tracking-wider text-ink-light">
+                  〒769-2101
+                  <br />
+                  香川県さぬき市志度1157
+                </p>
+              </div>
+
+              {/* Phone */}
+              <div>
+                <span className="text-[10px] tracking-[0.35em] text-ink-muted">TEL & FAX</span>
+                <p className="mt-2 text-sm tracking-wider text-ink-light">
+                  <a
+                    href="tel:087-894-0106"
+                    className="transition-colors hover:text-kraft"
+                  >
+                    087-894-0106
+                  </a>
+                </p>
+              </div>
+
+              {/* Hours */}
+              <div>
+                <span className="text-[10px] tracking-[0.35em] text-ink-muted">HOURS</span>
+                <p className="mt-2 text-sm tracking-wider text-ink-light">
+                  9:00〜19:00
+                </p>
+              </div>
+
+              {/* Holidays */}
+              <div>
+                <span className="text-[10px] tracking-[0.35em] text-ink-muted">CLOSED</span>
+                <p className="mt-2 text-sm tracking-wider text-ink-light">
+                  毎月曜日・第3火曜日
+                </p>
+              </div>
+
+              {/* Social */}
+              <div>
+                <span className="text-[10px] tracking-[0.35em] text-ink-muted">SOCIAL</span>
+                <div className="mt-2 flex flex-col gap-2">
+                  <a
+                    href="https://www.instagram.com/home_hair_coffee/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group flex items-center gap-3 text-sm tracking-[0.15em] text-ink-light transition-colors hover:text-ink"
+                  >
+                    <svg
+                      className="h-4 w-4 text-ink-muted transition-colors group-hover:text-kraft"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      strokeWidth="1.5"
+                    >
+                      <rect x="2" y="2" width="20" height="20" rx="5" />
+                      <circle cx="12" cy="12" r="5" />
+                      <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+                    </svg>
+                    @home_hair_coffee
+                  </a>
+                  <a
+                    href="https://www.threads.com/@home_hair_coffee"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group flex items-center gap-3 text-sm tracking-[0.15em] text-ink-light transition-colors hover:text-ink"
+                  >
+                    <svg
+                      className="h-4 w-4 text-ink-muted transition-colors group-hover:text-kraft"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.472 12.01v-.017c.03-3.579.879-6.43 2.525-8.482C5.845 1.205 8.6.024 12.18 0h.014c2.746.02 5.043.725 6.826 2.098 1.677 1.29 2.858 3.13 3.509 5.467l-2.04.569c-1.104-3.96-3.898-5.984-8.304-6.015-2.91.022-5.11.936-6.54 2.717C4.307 6.504 3.616 8.914 3.589 12c.027 3.086.718 5.496 2.057 7.164 1.43 1.783 3.631 2.698 6.54 2.717 2.623-.02 4.358-.631 5.8-2.045 1.647-1.613 1.618-3.593 1.09-4.798-.31-.71-.873-1.3-1.634-1.75-.192 1.352-.622 2.446-1.284 3.272-.886 1.102-2.14 1.704-3.73 1.79-1.202.065-2.361-.218-3.259-.801-1.063-.689-1.685-1.74-1.752-2.96-.065-1.17.408-2.266 1.33-3.084.88-.781 2.07-1.237 3.446-1.322 1.07-.066 2.067.043 2.981.287.022-.94-.075-1.79-.288-2.345-.352-.917-1.1-1.382-2.22-1.382h-.068c-.823.018-1.503.308-2.023.863l-1.39-1.449c.81-.858 1.9-1.32 3.237-1.456l.348-.006c1.821 0 3.178.768 3.833 2.15.413.872.623 1.958.636 3.223.004.163.003.327-.004.49.852.44 1.576 1.013 2.152 1.717.903 1.105 1.36 2.48 1.36 3.942.002 2.456-.992 4.636-2.882 6.316-1.94 1.724-4.493 2.627-7.385 2.612zm-1.2-8.816c-.645.04-1.173.2-1.572.477-.338.235-.52.534-.543.887-.032.476.213.905.69 1.214.56.363 1.3.549 2.198.502 1.077-.06 1.855-.44 2.382-1.165.306-.422.539-.96.69-1.601-.833-.275-1.771-.395-2.697-.395l-1.148.081z" />
+                    </svg>
+                    @home_hair_coffee
+                  </a>
                 </div>
               </div>
-            </FadeIn>
-
-            {/* Right column */}
-            <FadeIn delay={0.2}>
-              <div className="space-y-10">
-                {/* Phone */}
-                <div>
-                  <span className="text-[10px] tracking-[0.35em] text-ink-muted">TEL & FAX</span>
-                  <p className="mt-2 text-sm tracking-wider text-ink-light">
-                    <a
-                      href="tel:087-894-0106"
-                      className="transition-colors hover:text-kraft"
-                    >
-                      087-894-0106
-                    </a>
-                  </p>
-                </div>
-
-                {/* Hours */}
-                <div>
-                  <span className="text-[10px] tracking-[0.35em] text-ink-muted">HOURS</span>
-                  <div className="mt-2 space-y-1 text-sm tracking-wider text-ink-light">
-                    <p>9:00〜19:00</p>
-                  </div>
-                </div>
-
-                {/* Holidays */}
-                <div>
-                  <span className="text-[10px] tracking-[0.35em] text-ink-muted">CLOSED</span>
-                  <div className="mt-2 space-y-1 text-sm tracking-wider text-ink-light">
-                    <p>毎月曜日・第3火曜日</p>
-                  </div>
-                </div>
-
-                {/* Social */}
-                <div>
-                  <span className="text-[10px] tracking-[0.35em] text-ink-muted">SOCIAL</span>
-                  <div className="mt-3 flex flex-col gap-3">
-                    <a
-                      href="https://www.instagram.com/home_hair_coffee/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="group flex items-center gap-3 text-sm tracking-[0.15em] text-ink-light transition-colors hover:text-ink"
-                    >
-                      {/* Instagram icon */}
-                      <svg
-                        className="h-4 w-4 text-ink-muted transition-colors group-hover:text-kraft"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                        strokeWidth="1.5"
-                      >
-                        <rect x="2" y="2" width="20" height="20" rx="5" />
-                        <circle cx="12" cy="12" r="5" />
-                        <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
-                      </svg>
-                      @home_hair_coffee
-                    </a>
-                    <a
-                      href="https://www.threads.com/@home_hair_coffee"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="group flex items-center gap-3 text-sm tracking-[0.15em] text-ink-light transition-colors hover:text-ink"
-                    >
-                      {/* Threads icon (simplified) */}
-                      <svg
-                        className="h-4 w-4 text-ink-muted transition-colors group-hover:text-kraft"
-                        fill="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.472 12.01v-.017c.03-3.579.879-6.43 2.525-8.482C5.845 1.205 8.6.024 12.18 0h.014c2.746.02 5.043.725 6.826 2.098 1.677 1.29 2.858 3.13 3.509 5.467l-2.04.569c-1.104-3.96-3.898-5.984-8.304-6.015-2.91.022-5.11.936-6.54 2.717C4.307 6.504 3.616 8.914 3.589 12c.027 3.086.718 5.496 2.057 7.164 1.43 1.783 3.631 2.698 6.54 2.717 2.623-.02 4.358-.631 5.8-2.045 1.647-1.613 1.618-3.593 1.09-4.798-.31-.71-.873-1.3-1.634-1.75-.192 1.352-.622 2.446-1.284 3.272-.886 1.102-2.14 1.704-3.73 1.79-1.202.065-2.361-.218-3.259-.801-1.063-.689-1.685-1.74-1.752-2.96-.065-1.17.408-2.266 1.33-3.084.88-.781 2.07-1.237 3.446-1.322 1.07-.066 2.067.043 2.981.287.022-.94-.075-1.79-.288-2.345-.352-.917-1.1-1.382-2.22-1.382h-.068c-.823.018-1.503.308-2.023.863l-1.39-1.449c.81-.858 1.9-1.32 3.237-1.456l.348-.006c1.821 0 3.178.768 3.833 2.15.413.872.623 1.958.636 3.223.004.163.003.327-.004.49.852.44 1.576 1.013 2.152 1.717.903 1.105 1.36 2.48 1.36 3.942.002 2.456-.992 4.636-2.882 6.316-1.94 1.724-4.493 2.627-7.385 2.612zm-1.2-8.816c-.645.04-1.173.2-1.572.477-.338.235-.52.534-.543.887-.032.476.213.905.69 1.214.56.363 1.3.549 2.198.502 1.077-.06 1.855-.44 2.382-1.165.306-.422.539-.96.69-1.601-.833-.275-1.771-.395-2.697-.395l-1.148.081z" />
-                      </svg>
-                      @home_hair_coffee
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </FadeIn>
-          </div>
+            </div>
+          </FadeIn>
         </div>
       </div>
     </section>
