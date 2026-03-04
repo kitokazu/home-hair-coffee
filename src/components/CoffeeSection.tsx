@@ -59,7 +59,7 @@ export default function CoffeeSection() {
         {/* Arms Coffee brand block */}
         <FadeIn delay={0.1}>
           <div className="mt-14 text-center md:mt-16">
-            <div className="inline-block border-2 border-stamp px-8 py-4 md:px-10 md:py-5">
+            <div className="inline-block border-[3px] border-double border-stamp px-8 py-4 md:px-10 md:py-5">
               <span
                 className="text-2xl tracking-[0.2em] text-stamp md:text-3xl"
                 style={{ fontFamily: "'Shippori Mincho', serif" }}
@@ -119,7 +119,7 @@ export default function CoffeeSection() {
                   {f.label}
                 </h3>
                 <div className="mx-auto mt-3 h-px w-6 bg-kraft/40" />
-                <p className="mt-4 text-sm font-light leading-[2] tracking-wider text-ink-light">
+                <p className="mt-4 text-left text-sm font-light leading-[2] tracking-wider text-ink-light">
                   {f.desc}
                 </p>
               </div>
