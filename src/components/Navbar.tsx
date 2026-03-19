@@ -65,7 +65,7 @@ export default function Navbar() {
                 alt="home"
                 width={80}
                 height={52}
-                className="h-8 w-auto object-contain md:h-10"
+                className="h-20 w-auto object-contain md:h-24"
                 priority
               />
             </a>
