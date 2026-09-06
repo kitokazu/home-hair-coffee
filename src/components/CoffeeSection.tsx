@@ -23,19 +23,19 @@ function FadeIn({ children, delay = 0, className = "" }: { children: React.React
 
 const features = [
   {
-    label: "50℃お湯洗い焙煎",
+    label: "50℃お湯洗い・焙煎",
     english: "ROASTING",
     desc: "ハンドピックで欠点豆、虫食い豆、カビ豆などを取り除き、50℃お湯洗いして水蒸気焙煎の後本焙煎しています。",
-  },
-  {
-    label: "ドリップ",
-    english: "DRIP",
-    desc: "アームズメソッドの基本、一番出しドリップ。",
   },
   {
     label: "熟成",
     english: "AGING",
     desc: "焙煎後、1〜2週間熟成させることでより香りと味が整います。",
+  },
+  {
+    label: "ドリップ",
+    english: "DRIP",
+    desc: "アームズメソッドの基本、一番出しドリップ。",
   },
 ];
 

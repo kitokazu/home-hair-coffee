@@ -131,7 +131,7 @@ export default function About() {
                   珈琲
                 </h3>
                 <p className="mt-3 text-sm font-light leading-[2] tracking-wider text-ink-light">
-                  アームズ珈琲<span className="text-[9px] align-super">®</span>を、ドリップします。
+                  アームズ珈琲<span className="text-[9px] align-super">®</span>を、一杯ずつ丁寧にドリップします。
                 </p>
               </div>
             </div>
