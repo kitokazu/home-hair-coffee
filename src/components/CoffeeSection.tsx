@@ -23,19 +23,19 @@ function FadeIn({ children, delay = 0, className = "" }: { children: React.React
 
 const features = [
   {
-    label: "50℃お湯洗い",
-    english: "HOME ROASTED",
+    label: "焙煎",
+    english: "ROASTING",
     desc: "ハンドピックで欠点豆、虫食い豆、カビ豆などを取り除き、50℃のお湯洗いして水蒸気焙煎の後本焙煎しています。",
   },
   {
-    label: "新鮮な豆",
-    english: "FRESH BEANS",
-    desc: "焙煎したてだから、香りがぜんぜん違います",
+    label: "ドリップ",
+    english: "DRIP",
+    desc: "アームズメソッドの基本、一番出しドリップ。",
   },
   {
-    label: "少量焙煎",
-    english: "SMALL BATCH",
-    desc: "大量生産はしません。少しずつ、その都度",
+    label: "熟成",
+    english: "AGING",
+    desc: "焙煎後、1〜2週間熟成させることでより香りと味が整います。",
   },
 ];
 
@@ -86,7 +86,7 @@ export default function CoffeeSection() {
                 推進する焙煎メソッドで仕上げた珈琲です。
               </p>
               <p>
-                「安心・安全で、冷めてもますます美味しい」
+                「安心・安全で、冷めても美味しい。」
                 <br />
                 をコンセプトに、豆の産地ごとに最適な焙煎を施しています。
               </p>

@@ -41,7 +41,7 @@ export const coffeeImages: ImageItem[] = [
 // ============================================================
 export const aboutImages = {
   hair: "/images/hair/IMG_1258.JPG",
-  coffee: "/images/coffee/IMG_1233.JPG",
+  coffee: "/images/coffee/coffee-machine.jpg",
 };
 
 // Combined gallery
