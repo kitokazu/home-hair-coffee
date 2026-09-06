@@ -23,9 +23,9 @@ function FadeIn({ children, delay = 0, className = "" }: { children: React.React
 
 const features = [
   {
-    label: "焙煎",
+    label: "50℃お湯洗い焙煎",
     english: "ROASTING",
-    desc: "ハンドピックで欠点豆、虫食い豆、カビ豆などを取り除き、50℃のお湯洗いして水蒸気焙煎の後本焙煎しています。",
+    desc: "ハンドピックで欠点豆、虫食い豆、カビ豆などを取り除き、50℃お湯洗いして水蒸気焙煎の後本焙煎しています。",
   },
   {
     label: "ドリップ",
