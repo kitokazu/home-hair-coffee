@@ -39,6 +39,11 @@ const features = [
   },
 ];
 
+const prices = [
+  { size: "90g", price: "¥1,080" },
+  { size: "300g", price: "¥3,240" },
+];
+
 export default function CoffeeSection() {
   return (
     <section id="coffee" className="relative bg-kraft-light/25 px-6 py-28 md:py-40">
@@ -137,8 +142,31 @@ export default function CoffeeSection() {
               いちばん美味しいタイミングで。
             </p>
             <p className="mt-4 text-sm font-light leading-[2] tracking-wider text-ink-light md:text-base">
-              焙煎したての豆だからこそ味わえる香りがあります。
+              熟成豆だからこそ味わえる香りがあります。
             </p>
+          </div>
+        </FadeIn>
+
+        {/* Price list */}
+        <FadeIn delay={0.15}>
+          <div className="mx-auto mt-20 max-w-sm md:mt-24">
+            <p className="mb-6 text-center text-[10px] tracking-[0.3em] text-ink-muted">
+              アームズ珈琲<span className="text-[8px] align-super">®</span>販売
+              <span className="ml-2 tracking-[0.1em]">（税込）</span>
+            </p>
+            <div className="space-y-4">
+              {prices.map((p) => (
+                <div key={p.size} className="flex items-baseline justify-between border-b border-kraft/15 pb-3">
+                  <span
+                    className="text-base tracking-[0.1em] text-ink"
+                    style={{ fontFamily: "'Shippori Mincho', serif" }}
+                  >
+                    {p.size}
+                  </span>
+                  <span className="text-sm tracking-wider text-ink-light">{p.price}</span>
+                </div>
+              ))}
+            </div>
           </div>
         </FadeIn>
 

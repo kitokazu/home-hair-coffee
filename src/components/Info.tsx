@@ -41,7 +41,7 @@ export default function Info() {
         <div className="mt-16 grid items-start gap-10 md:mt-20 md:grid-cols-[5fr_7fr] md:gap-12">
           {/* Image */}
           <FadeIn delay={0.1}>
-            <div className="mx-auto max-w-[280px] overflow-hidden rounded-sm md:max-w-none">
+            <div className="mx-auto max-w-[200px] overflow-hidden rounded-sm md:mx-0 md:max-w-[260px]">
               <Image
                 src="/images/info/IMG_0195.JPG"
                 alt="home hair & coffee roaster"
