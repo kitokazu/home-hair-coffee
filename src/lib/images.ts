@@ -22,7 +22,8 @@ export const hairImages: ImageItem[] = [
   { src: "/images/hair/IMG_7720.JPG", alt: "ヘアスタイル", category: "hair", aspect: "portrait" },
   { src: "/images/hair/IMG_1250.JPG", alt: "ヘアスタイル", category: "hair", aspect: "portrait" },
   { src: "/images/hair/IMG_7721.JPG", alt: "ヘアスタイル", category: "hair", aspect: "portrait" },
-  { src: "/images/hair/IMG_7722.JPG", alt: "ヘアスタイル", category: "hair", aspect: "portrait" },  { src: "/images/hair/IMG_7736.JPG", alt: "店主とお客さま", category: "hair", aspect: "portrait" },
+  { src: "/images/hair/IMG_7722.JPG", alt: "ヘアスタイル", category: "hair", aspect: "portrait" },
+  { src: "/images/hair/IMG_7736.JPG", alt: "店主とお客さま", category: "hair", aspect: "portrait" },
 ];
 
 // ============================================================
