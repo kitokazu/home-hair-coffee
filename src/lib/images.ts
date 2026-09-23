@@ -22,7 +22,7 @@ export const hairImages: ImageItem[] = [
   { src: "/images/hair/IMG_7720.JPG", alt: "ヘアスタイル", category: "hair", aspect: "portrait" },
   { src: "/images/hair/IMG_1250.JPG", alt: "ヘアスタイル", category: "hair", aspect: "portrait" },
   { src: "/images/hair/IMG_7721.JPG", alt: "ヘアスタイル", category: "hair", aspect: "portrait" },
-  { src: "/images/hair/IMG_7722.JPG", alt: "ヘアスタイル", category: "hair", aspect: "portrait" },
+  { src: "/images/hair/IMG_7722.JPG", alt: "ヘアスタイル", category: "hair", aspect: "portrait" },  { src: "/images/hair/IMG_7736.JPG", alt: "店主とお客さま", category: "hair", aspect: "portrait" },
 ];
 
 // ============================================================
@@ -35,7 +35,6 @@ export const coffeeImages: ImageItem[] = [
   { src: "/images/coffee/IMG_7734.JPG", alt: "生豆を洗っています", category: "coffee", aspect: "portrait" },
   { src: "/images/coffee/IMG_7729.JPG", alt: "焙煎豆", category: "coffee", aspect: "portrait" },
   { src: "/images/coffee/IMG_7732.JPG", alt: "焙煎度合いの見本", category: "coffee", aspect: "portrait" },
-  { src: "/images/coffee/IMG_7730.JPG", alt: "焙煎豆", category: "coffee", aspect: "portrait" },
   { src: "/images/coffee/IMG_7735.JPG", alt: "コーヒーミル", category: "coffee", aspect: "portrait" },
   { src: "/images/coffee/IMG_7731.JPG", alt: "ドリップ", category: "coffee", aspect: "portrait" },
   { src: "/images/coffee/IMG_7733.JPG", alt: "アームズ珈琲のパッケージ", category: "coffee", aspect: "portrait" },
@@ -49,7 +48,7 @@ export const coffeeImages: ImageItem[] = [
 // ABOUT SECTION IMAGES
 // ============================================================
 export const aboutImages = {
-  hair: "/images/hair/IMG_7722.JPG",
+  hair: "/images/hair/IMG_1258.JPG",
   coffee: "/images/coffee/coffee-machine.jpg",
 };
 
